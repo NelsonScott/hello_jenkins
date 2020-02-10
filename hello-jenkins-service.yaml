@@ -3,12 +3,10 @@ kind: Service
 metadata:
   name: hello-jenkins
 spec:
-  externalTrafficPolicy: Cluster
   ports:
-  - nodePort: 32036
-    port: 8080
+  - port: 8080
     protocol: TCP
     targetPort: 8080
   selector:
     app: hello-jenkins
-  type: NodePort
+  type: ClusterIP
