@@ -18,7 +18,7 @@ spec:
       paths:
       - backend:
           serviceName: hello-jenkins
-          servicePort: http
+          servicePort: 8080
     host: jenkins.scottnelson.dev.k8s.pelotime.com
   tls:
   - hosts:
