@@ -34,3 +34,6 @@ kubectl logs hello-jenkins
 
 ## open it up, once logs say its ready
 `minikube service hello-jenkins`
+
+## Potential Future work
+Add CI like Travis, github actions, to test the setup on minikube
