@@ -1,12 +1,14 @@
-# How I deployed Jenkins on MiniKube (or a dev K8s Cluster)
+# Deploy Jenkins master to Kubernetes Cluster or MiniKube
 
-Use kubectl apply your manifests  
+We'll use kubectl to apply the manifests  
 
 `./scripts/deploy.sh`
+You can always remove all this later with `./scripts/tear_down.sh`
 
-Check the status by finding your pod:
+Find your pod(s):
 `kubectl get pods`
-And then tailing logs
+
+And tail logs to find your initial password, you'll see a message like "Please use the following password to proceed to installation"
 `kubectl logs --follow hello-jenkins-76fcbcbc9b-z6vhv`
 
 Visit the host
@@ -20,6 +22,8 @@ host: jenkins.scottnelson.dev.k8s.pelotime.com`
 # which will send you to
 https://jenkins.scottnelson.dev.k8s.pelotime.com/login?from=%2F
 ```
+
+Select install recommended plugins, create your user, and then you're done.
 
 ### Solved Issues (gotchas)
 Can't delete any files due to user permissions,
