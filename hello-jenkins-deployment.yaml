@@ -20,7 +20,7 @@ spec:
         app: hello-jenkins
     spec:
       containers:
-      - image: jenkins:2.237
+      - image: jenkins/jenkins:2.237
         imagePullPolicy: Always
         name: jenkins
         resources:
