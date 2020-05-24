@@ -1,6 +1,12 @@
-# How I deployed Jenkins on MiniKube
+# How I deployed Jenkins on MiniKube (or a dev K8s Cluster)
 
-Use kubectl to apply the deployment, then service.  
+Use kubectl apply your manifests  
+
+```
+kubectl apply -f hello-jenkins-deployment.yaml
+kubectl apply -f hello-jenkins-service.yaml
+kubectl apply -f hello-jenkins-ingress.yaml
+```
 
 ## Known Issues
 Can't delete any files due to user permissions,
@@ -14,7 +20,7 @@ Needed to follow configuration on https://github.com/jenkinsci/kubernetes-plugin
 
 The blazemeter guide was a little incomplete here, follow the above guide, also seemed to need to specify label in jenkinsfile
 
-# First Way, Reversed Engineered Files from This
+# (Just for Posterity) First Way, Reversed Engineered Files from This
 ## create it
 
 ```
